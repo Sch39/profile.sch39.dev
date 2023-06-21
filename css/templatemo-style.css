@@ -463,6 +463,7 @@ a:focus {
 
 #service .service-thumb {
   padding: 52px 22px 52px 22px;
+  /* height: 100vh; */
 }
 
 #service .service-thumb .fa {
@@ -478,7 +479,7 @@ a:focus {
 
 #experience .experience-img {
   background: url('../images/experience-img.jpg') no-repeat;
-  height: 160vh;
+  height: 180vh;
 }
 
 #experience .media-heading {
@@ -505,6 +506,7 @@ a:focus {
 
 #education .education-img {
   background: url('../images/education-img.jpg') no-repeat;
+  height: 100vh;
 }
 
 #education .media-heading {
@@ -564,16 +566,25 @@ a:focus {
   background: #E9724C;
 }
 
-#contact .contact-form,
+#contact .contact-form {
+  padding: 22px 32px 22px 32px;
+  height: 100%;
+}
+
 #contact .contact-thumb {
   padding: 22px 32px 22px 32px;
-  height: 170vh;
+  min-height: 100vh;
+
 }
 
 #contact .contact-img {
   background: url('../images/sch-contact-img.jpg') no-repeat;
-  min-height: 170vh;
+  min-height: 100vh;
   background-color: rgba(255, 255, 255, 0.289);
+  /* height: 100%;
+  width: 100%; */
+  background-position: center;
+  background-size: cover;
 }
 
 #contact .contact-info {
@@ -706,16 +717,23 @@ footer {
     line-height: inherit;
   }
 
-  /* #contact .contact-form,
-#contact .contact-thumb {
-  padding: 22px 32px 22px 32px;
-  height: 170vh;
-} */
+
+  #education .education-img {
+    /* visibility: hidden !important; */
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 767px) {
   .custom-navbar .navbar-brand {
     line-height: 18px;
+  }
+
+
+  #education .education-img {
+    /* visibility: hidden !important; */
+    display: none;
   }
 
   #home .home-thumb {
