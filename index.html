@@ -5,12 +5,36 @@
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="templatemo">
+     <meta name="description" content="Sukron Chafidhi - Web Developer & Machine Learning Enthusiast. 3+ years of experience in web development, Laravel, Vue.js, and machine learning.">
+     <meta name="keywords" content="web developer, machine learning, Laravel, Vue.js, portfolio, sukron chafidhi">
+     <meta name="author" content="Sukron Chafidhi">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <title>Sukron Chafidhi | Web Developer</title>
+     <title>Sukron Chafidhi | Web Developer & Machine Learning</title>
+
+     <!-- SEO: Canonical URL pointing to new domain -->
+     <link rel="canonical" href="https://sch39.dev">
+
+     <!-- SEO: Meta redirect (HTTP equivalent) -->
+     <meta http-equiv="refresh" content="0; url=https://sch39.dev">
+
+     <!-- Open Graph Meta Tags (for social sharing & SEO) -->
+     <meta property="og:title" content="Sukron Chafidhi | Web Developer & Machine Learning">
+     <meta property="og:description" content="Web Developer & Machine Learning Enthusiast with 3+ years of experience. Specializing in Laravel, Vue.js, and AI/ML projects.">
+     <meta property="og:type" content="profile">
+     <meta property="og:url" content="https://sch39.dev">
+     <meta property="og:image" content="https://sch39.dev/icons/sch39.png">
+
+     <!-- Twitter Card Meta Tags -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Sukron Chafidhi | Web Developer & Machine Learning">
+     <meta name="twitter:description" content="Web Developer & Machine Learning Enthusiast with 3+ years of experience.">
+     <meta name="twitter:image" content="https://sch39.dev/icons/sch39.png">
+
+     <!-- Additional SEO Tags -->
+     <meta name="robots" content="index, follow">
+     <meta name="language" content="English">
+     <meta name="revisit-after" content="7 days">
 
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/animate.css">
@@ -20,9 +44,206 @@
 
      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 
+     <style>
+          .redirect-overlay {
+               position: fixed;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: rgba(0, 0, 0, 0.6);
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               z-index: 9999;
+               backdrop-filter: blur(4px);
+               animation: fadeIn 0.4s ease-out;
+          }
+
+          @keyframes fadeIn {
+               from { opacity: 0; }
+               to { opacity: 1; }
+          }
+
+          @keyframes fadeOut {
+               from { opacity: 1; }
+               to { opacity: 0; }
+          }
+
+          .redirect-modal {
+               background: white;
+               border-radius: 16px;
+               box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+               max-width: 500px;
+               width: 90%;
+               padding: 40px 35px;
+               text-align: center;
+               animation: slideUp 0.5s ease-out;
+          }
+
+          @keyframes slideUp {
+               from {
+                    opacity: 0;
+                    transform: translateY(30px);
+               }
+               to {
+                    opacity: 1;
+                    transform: translateY(0);
+               }
+          }
+
+          .redirect-icon {
+               font-size: 60px;
+               margin-bottom: 20px;
+               animation: bounce 2s infinite;
+          }
+
+          @keyframes bounce {
+               0%, 100% { transform: translateY(0); }
+               50% { transform: translateY(-15px); }
+          }
+
+          .redirect-modal h2 {
+               font-size: 28px;
+               color: #333;
+               margin-bottom: 10px;
+               font-weight: 700;
+               font-family: 'Source Sans Pro', sans-serif;
+          }
+
+          .redirect-modal p {
+               font-size: 16px;
+               color: #666;
+               margin-bottom: 8px;
+               line-height: 1.6;
+               font-family: 'Source Sans Pro', sans-serif;
+          }
+
+          .redirect-url {
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+               color: white;
+               padding: 12px;
+               border-radius: 8px;
+               font-size: 16px;
+               font-weight: 600;
+               margin-bottom: 25px;
+               word-break: break-all;
+               font-family: 'Source Sans Pro', sans-serif;
+          }
+
+          .redirect-url a {
+               color: white;
+               text-decoration: none;
+               font-weight: 700;
+               border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+               transition: border-color 0.3s ease;
+          }
+
+          .redirect-url a:hover {
+               border-bottom-color: white;
+          }
+
+
+          .button-group {
+               display: flex;
+               gap: 12px;
+               justify-content: center;
+               margin-top: 15px;
+          }
+
+          .redirect-btn {
+               padding: 12px 24px;
+               font-size: 15px;
+               font-weight: 600;
+               border: none;
+               border-radius: 8px;
+               cursor: pointer;
+               transition: all 0.3s ease;
+               text-decoration: none;
+               display: inline-block;
+               text-transform: uppercase;
+               letter-spacing: 0.5px;
+               font-family: 'Source Sans Pro', sans-serif;
+          }
+
+          .btn-go-now {
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+               color: white;
+          }
+
+          .btn-go-now:hover {
+               transform: translateY(-2px);
+               box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+          }
+
+          .btn-go-now:active {
+               transform: translateY(0);
+          }
+
+          .status-text {
+               font-size: 12px;
+               color: #999;
+               margin-top: 15px;
+               padding-top: 15px;
+               border-top: 1px solid #eee;
+          }
+
+          @media (max-width: 600px) {
+               .redirect-modal {
+                    padding: 30px 20px;
+               }
+
+               .redirect-modal h2 {
+                    font-size: 22px;
+               }
+
+               .countdown-timer {
+                    font-size: 40px;
+                    letter-spacing: 3px;
+               }
+
+               .button-group {
+                    flex-direction: column;
+                    gap: 10px;
+               }
+
+               .btn-go-now,
+               .btn-close-modal {
+                    width: 100%;
+               }
+          }
+     </style>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- Redirect Notification Modal -->
+     <div class="redirect-overlay" id="redirectOverlay">
+          <div class="redirect-modal">
+               <div class="redirect-icon">🚀</div>
+               <h2>We've Moved!</h2>
+               <p>This page has permanently moved to a new domain.</p>
+
+               <div class="redirect-url">
+                    Visit us at: <a href="https://sch39.dev" target="_blank">sch39.dev</a>
+               </div>
+
+               <p style="font-size: 14px; color: #999; margin-top: 20px;">
+                    You will be automatically redirected in a moment...
+               </p>
+
+               <div class="button-group" style="margin-top: 20px;">
+                    <a href="https://sch39.dev" class="redirect-btn btn-go-now" style="width: 100%;">
+                         ➔ Go to sch39.dev Now
+                    </a>
+               </div>
+
+               <div class="status-text" id="statusText">
+                    Auto-redirecting...
+               </div>
+          </div>
+     </div>
 
 
      <!-- PRE LOADER -->
@@ -461,6 +682,12 @@
      <script src="js/smoothscroll.js"></script>
      <script src="js/wow.min.js"></script>
      <script src="js/custom.js"></script>
+
+     <script>
+          setTimeout(() => {
+               window.location.href = 'https://sch39.dev';
+          }, 3000);
+     </script>
 
 </body>
 

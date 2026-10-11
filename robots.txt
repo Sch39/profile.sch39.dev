@@ -1,0 +1,22 @@
+# Robots.txt for SEO optimization
+# This file helps search engines understand how to crawl and index your site
+
+User-agent: *
+Allow: /
+Disallow: /private/
+
+# Specify sitemap
+Sitemap: https://sch39.dev/sitemap.xml
+
+# Crawl delay (optional - allows time between requests)
+Crawl-delay: 1
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
